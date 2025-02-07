@@ -1,0 +1,47 @@
+//Trae un solo elemento
+document.getElementById('app-id')
+document.querySelector('#app-title')
+document.querySelector('p')
+
+//Trae todos los elementos
+document.getElementsByClassName('menu-items')
+document.getElementsByTagName('p')
+document.querySelectorAll('.menu-items')
+
+/* La navegación entre nodos recibe el nombre de 
+traversing  DOM, y consiste en recorrer los nodos 
+basandonos en la jerárquia de padre, hijos, hermanos. */
+
+//* Navegación del elemento padre a hijo
+
+const menu = document.querySelector('.menu')
+console.log(menu.children)
+/*
+ children → nos retorna un HTMLCollection con los nodos hijos del nodo padre.
+*/
+
+//? Acceder al primer nodo → firstElementChild
+console.log(menu.firstElementChild.innerHTML)
+
+//? Acceder a un node específico → []
+console.log(menu.children[1].innerHTML);
+
+//? Acceder al último elemento → lastElementChild
+console.log(menu.lastElementChild.innerHTML);
+
+//* Navegación de un nodo hijo a padre
+const link = document.querySelector('.link')
+/*parentElement → nos retorna su nodo padre */
+console.log(link.parentElement)
+// Para conocer el abuelo de ese nodo podemos usar nuevamente parentElement y asi sucesivamente .
+console.log(link.parentElement.parentElement)
+
+//* Navegación entre nodos hermanos
+/*
+previousSiblind → Hermano anterior
+nextSibling → Hermano siguiente
+*/
+console.log(link)
+console.log(link.previousElementSibling.textContent)
+console.log(link.nextElementSibling.textContent)
+```![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/519099cb-ab4b-4ace-83bd-688d8f9ee34e/b08c5ecb-a8f5-45e2-966d-970640b5d4ab/Untitled.png)
